@@ -5,7 +5,7 @@
 html,
 body {
   margin: 0px;
-  font-family: "fairuz";
+  font-family: "fairuz" !important;
 }
 @font-face {
   font-family: "fairuz";
@@ -21,4 +21,8 @@ body {
   font-weight: 700;
   font-display: swap;
   src: url("~assets/fonts/fairuz.otf") format("truetype");
+}
+
+.v-application {
+  font-family: "fairuz" !important;
 }

@@ -25,7 +25,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    // '~/plugins/vuetify.js',
+    '~/plugins/vuetify.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -51,8 +51,9 @@ export default {
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    rtl: true,
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
