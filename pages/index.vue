@@ -1,36 +1,33 @@
 <template>
-  <v-card class="mx-auto text-center" color="green" dark max-width="100%">
-    <v-card-text>
-      <v-sheet color="rgba(0, 0, 0, .12)">
-        <v-sparkline
-          :value="value"
-          color="rgba(255, 255, 255, .7)"
-          height="100"
-          padding="24"
-          stroke-linecap="round"
-          smooth
-        >
-          <template v-slot:label="item"> ${{ item.value }} </template>
-        </v-sparkline>
-      </v-sheet>
-    </v-card-text>
+  <v-container class="grey lighten-5">
+    <v-banner two-line>
+      <v-avatar slot="icon" color="deep-purple accent-4" size="40">
+        <v-icon icon="mdi-lock" color="white"> mdi-lock </v-icon>
+      </v-avatar>
 
-    <v-card-text>
-      <div class="display-1 font-weight-thin">Sales Last 24h</div>
-    </v-card-text>
+      الإحصائيات الخاصه بالعيادة من هنا يتم مراقبه جميع الحركات بداخل العيادة
 
-    <v-divider></v-divider>
+      <template v-slot:actions>
+        <v-btn text color="deep-purple accent-4"> مشاهدة </v-btn>
+        <v-btn text color="deep-purple accent-4"> خيار </v-btn>
+      </template>
+    </v-banner>
+    <v-row no-gutters>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3"> One of three columns </v-card>
+      </v-col>
 
-    <v-card-actions class="justify-center">
-      <v-btn block text> Go to Report </v-btn>
-    </v-card-actions>
-  </v-card>
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3"> One of three columns </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="4">
+        <v-card class="pa-3"> One of three columns </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-export default {
-  data: () => ({
-    value: [423, 446, 675, 510, 590, 610, 760],
-  }),
-};
+export default {};
 </script>
